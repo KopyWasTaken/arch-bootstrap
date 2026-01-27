@@ -1,7 +1,10 @@
 return {
     'nvim-telescope/telescope.nvim',
     branch = 'master',
-    depedencies = { 'nvim-lua/plenary.nvim' },
+    depedencies = { 
+        'nvim-lua/plenary.nvim',
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    },
     config = function()
         local harpoon = require('harpoon')
         harpoon:setup({})

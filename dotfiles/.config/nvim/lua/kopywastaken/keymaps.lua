@@ -22,6 +22,9 @@ end, { desc = 'Toggle diagnostic virtual_lines' })
 local telescope = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', telescope.find_files, { desc = "Telescope find files" })
 vim.keymap.set('n', '<leader>fw', telescope.live_grep, { desc = "Telescope live grep" })
+vim.keymap.set('n', '<leader>gs', telescope.git_status, { desc = "Telescope git status" })
+vim.keymap.set('n', '<leader>gb', telescope.git_branches, { desc = "Telescope git branches" })
+vim.keymap.set('n', '<leader>gc', telescope.git_commits, { desc = "Telescope git commits" })
 
 -- Alright I'm not sure what the following do
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Goes to the bottom of the page and ?" })

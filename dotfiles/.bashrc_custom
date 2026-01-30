@@ -9,4 +9,13 @@ alias apply_config="~/dotfiles/dotfiles/.config/scripts/apply_config.sh"
 
 
 # custom functions
-
+# Function that automatically pushes all changes with a commit message to github
+git-cmp() {
+    if [ -z "$1" ]; then
+        echo "Usage: git-cmp \"commit message\""
+        return 1
+    fi
+    git add -A 
+    git commit -m "$1"
+    git push
+}

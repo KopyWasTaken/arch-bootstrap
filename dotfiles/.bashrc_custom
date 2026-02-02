@@ -7,6 +7,8 @@ alias ls="ls --color=auto"
 alias backup_config="~/dotfiles/dotfiles/.config/scripts/backup_config.sh"
 alias apply_config="~/dotfiles/dotfiles/.config/scripts/apply_config.sh"
 
+# Source things that need to be sourced 
+source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # custom functions
 # Function that automatically pushes all changes with a commit message to github

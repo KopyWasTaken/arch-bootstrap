@@ -9,7 +9,7 @@ return {
         local harpoon = require('harpoon')
         harpoon:setup({})
 
-        -- basic telescope configuration
+        -- basic telescope configuration for harpoon
         local conf = require("telescope.config").values
         local function toggle_telescope(harpoon_files)
             local file_paths = {}
@@ -29,5 +29,13 @@ return {
 
         vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end,
             { desc = "Open harpoon window" })
+
+        require('telescope').setup{
+            pickers = {
+                find_files = {
+                    theme = "dropdown",
+                }
+            },
+        }
     end
 }

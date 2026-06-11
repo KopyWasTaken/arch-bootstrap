@@ -13,3 +13,6 @@ local opt = vim.opt
 
 opt.shiftwidth = 4 -- size of indentations
 opt.tabstop = 4 -- number of spaces tabs count for
+
+-- I actually want things to wrap if they get too long
+vim.g.wrap = true
